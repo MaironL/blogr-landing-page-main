@@ -1,0 +1,25 @@
+*.sketch
+*.fig
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/build
+
+#design
+/design
+
+#README
+README-template.md
+README.md
+
+#style-g
+style-guide.md
+
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
