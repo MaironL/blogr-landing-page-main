@@ -8,14 +8,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link href="/dist/output.css" rel="stylesheet" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100&family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="logic.js"></script>
     <title>Frontend Mentor | [Blogr]</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
@@ -23,35 +26,361 @@
   </head>
   <body>
     <article id="root">
-      Product Overview Pricing Marketplace Features Integrations Company About Team Blog
-      Careers Connect Contact Newsletter LinkedIn Login Sign Up A modern publishing
-      platform Grow your audience and build your online brand Start for Free Learn More
-      Designed for the future Introducing an extensible editor Blogr features an
-      exceedingly intuitive interface which lets you focus on one thing: creating content.
-      The editor supports management of multiple blogs and allows easy manipulation of
-      embeds such as images, videos, and Markdown. Extensibility with plugins and themes
-      provide easy ways to add functionality or change the looks of a blog. Robust content
-      management Flexible content management enables users to easily move through posts.
-      Increase the usability of your blog by adding customized categories, sections,
-      format, or flow. With this functionality, you’re in full control. State of the Art
-      Infrastructure With reliability and speed in mind, worldwide data centers provide
-      the backbone for ultra-fast connectivity. This ensures your site will load
-      instantly, no matter where your readers are, keeping your site competitive. Free,
-      open, simple Blogr is a free and open source application backed by a large community
-      of helpful developers. It supports features such as code syntax highlighting, RSS
-      feeds, social media integration, third-party commenting tools, and works seamlessly
-      with Google Analytics. The architecture is clean and is relatively easy to learn.
-      Powerful tooling Batteries included. We built a simple and straightforward CLI tool
-      that makes customization and deployment a breeze, but capable of producing even the
-      most complicated sites. Product Overview Pricing Marketplace Features Integrations
-      Company About Team Blog Careers Connect Contact Newsletter LinkedIn
-    </article>
+      <section
+        class="bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] h-[600px] rounded-bl-[80px]"
+      >
+        <div
+          class="w-full h-full bg-no-repeat bg-bannerMobile bg-[left_-320px_bottom_-480px] md:bg-bannerDesktop sm:bg-[length:3000px_3000px] sm:bg-[left_-360px_bottom_-1140px] pt-14 sm:pt-16 px-5 lg:px-0 rounded-bl-[80px]"
+        >
+          <div
+            class="container relative mx-auto max-w-[1090px] flex items-center justify-between mb-28"
+          >
+            <img class="mr-16 w-20 sm:w-24 md:pb-10" src="/images/logo.svg" alt="Blogr" />
+            <div class="flex md:container md:justify-between">
+              <img
+                id="menuOpen"
+                class="md:hidden"
+                src="/images/icon-hamburger.svg"
+                alt="menu"
+              />
+              <img
+                id="menuClose"
+                class="hidden md:hidden"
+                src="/images/icon-close.svg"
+                alt="menu"
+              />
+              <nav
+                id="menu"
+                class="hidden container text-center flex-col absolute centerDrop bg-slate-100 py-8 px-6 rounded-md md:py-0 md:px-0 md:bg-transparent md:-translate-x-0 md:static md:max-w-[300px] md:flex md:flex-row md:justify-between md:items-center"
+              >
+                <div class="relative group mb-6 md:mb-0">
+                  <span
+                    class="flex justify-center items-center mb-6 font-medium text-lg md:pb-8 md:px-6 md:mb-0 md:text-base md:text-slate-100 font-[Ubuntu] cursor-pointer"
+                  >
+                    Product
+                    <img
+                      class="hidden md:block md:ml-2 md:group-hover:rotate-180"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrow"
+                    />
+                    <img
+                      class="md:hidden ml-2 group-hover:rotate-180"
+                      src="/images/icon-arrow-dark.svg"
+                      alt="arrow"
+                    />
+                  </span>
+                  <ul
+                    class="hidden bg-slate-200 rounded py-6 md:md:bg-white md:absolute md:top-14 md:-left-8 md:px-10 group-hover:block"
+                  >
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Overview
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Pricing
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Marketplace
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-boldmd:w-28"
+                    >
+                      Features
+                    </li>
+                    <li
+                      class="font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Integrations
+                    </li>
+                  </ul>
+                </div>
+                <div class="relative group mb-6 md:mb-0">
+                  <span
+                    class="flex justify-center items-center mb-6 md:mb-0 font-medium text-lg md:pb-8 md:px-6 md:text-base md:text-slate-100 font-[Ubuntu] cursor-pointer"
+                    >Company
+                    <img
+                      class="hidden md:block md:ml-2 md:group-hover:rotate-180"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrow"
+                    />
+                    <img
+                      class="md:hidden ml-2 group-hover:rotate-180"
+                      src="/images/icon-arrow-dark.svg"
+                      alt="arrow"
+                    />
+                  </span>
+                  <ul
+                    class="hidden bg-slate-200 py-6 rounded md:md:bg-white md:top-14 md:-left-8 md:px-10 md:absolute group-hover:block"
+                  >
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      About
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Team
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Blog
+                    </li>
+                    <li
+                      class="font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Careers
+                    </li>
+                  </ul>
+                </div>
+                <div class="relative group md:mb-0">
+                  <span
+                    class="flex justify-center items-center mb-6 md:mb-0 font-medium text-lg md:pb-8 md:px-6 md:text-base md:text-slate-100 font-[Ubuntu] cursor-pointer"
+                  >
+                    Connect
+                    <img
+                      class="hidden md:block md:ml-2 md:group-hover:rotate-180"
+                      src="/images/icon-arrow-light.svg"
+                      alt="arrow"
+                    />
+                    <img
+                      class="md:hidden ml-2 group-hover:rotate-180"
+                      src="/images/icon-arrow-dark.svg"
+                      alt="arrow"
+                    />
+                  </span>
+                  <ul
+                    class="hidden bg-slate-200 py-6 md:bg-white md:top-14 md:-left-8 md:px-10 rounded md:absolute group-hover:block"
+                  >
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Contact
+                    </li>
+                    <li
+                      class="mb-6 font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      Newsletter
+                    </li>
+                    <li
+                      class="font-medium text-slate-700 font-[Ubuntu] md:hover:font-bold md:w-28"
+                    >
+                      LinkedIn
+                    </li>
+                  </ul>
+                </div>
+                <hr class="mt-4 mb-6" />
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+                <div class="flex md:hidden flex-col items-center">
+                  <button class="font-medium font-[Ubuntu] text-lg mb-6">Login</button>
+                  <button
+                    class="font-medium text-slate-100 font-[Ubuntu] bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] w-36 px-10 py-4 rounded-full"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </nav>
+
+              <div class="hidden md:block md:pb-8">
+                <button class="font-medium text-slate-100 font-[Ubuntu]">Login</button>
+                <button
+                  class="bg-slate-100 font-medium font-[Ubuntu] text-[#ff3d54] ml-8 px-10 py-3 rounded-full hover:bg-[#FF7B86] hover:text-slate-50"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <h1
+            class="text-4xl font-semibold text-slate-100 font-[Overpass] text-center mb-7 md:text-6xl"
+          >
+            A modern publishing platform
+          </h1>
+          <p class="text-slate-100 text-xl font-[Overpass] text-center mb-10">
+            Grow your audience and build your online brand
+          </p>
+          <div class="mx-auto max-w-fit">
+            <button
+              class="bg-slate-100 font-semibold font-[Overpass] text-red-500 px-6 py-3 rounded-full hover:bg-[#FF7B86] hover:text-slate-50"
+            >
+              Start for Free
+            </button>
+            <button
+              class="font-semibold font-[Overpass] text-slate-50 border border-slate-50 ml-5 px-8 py-3 rounded-full hover:bg-slate-50 hover:text-red-500"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container max-w-screen-xl flex flex-col mx-auto items-center md:h-[960px] md:pl-12 md:bg-no-repeat md:bg-editorDesktop md:bg-[left_500px_bottom_0px] lg:bg-[left_780px_bottom_0px]"
+      >
+        <h2
+          class="mt-40 font-[Overpass] font-semibold text-slate-700 text-3xl mb-10 md:mb-28 md:text-4xl"
+        >
+          Designed for the future
+        </h2>
+        <div
+          class="flex flex-wrap-reverse justify-center w-full md:justify-between max-w-screen-lg"
+        >
+          <div
+            class="flex flex-col items-center text-center px-10 md:px-0 md:w-[450px] md:items-start md:text-left lg:w-1/2"
+          >
+            <h2 class="font-[Overpass] font-semibold text-slate-700 text-3xl w-xs mb-6">
+              Introducing an extensible editor
+            </h2>
+            <p
+              class="font-[Overpass] text-slate-700 mb-10 font-light md:mb-20 md:leading-7"
+            >
+              Blogr features an exceedingly intuitive interface which lets you focus on
+              one thing: creating content. The editor supports management of multiple
+              blogs and allows easy manipulation of embeds such as images, videos, and
+              Markdown. Extensibility with plugins and themes provide easy ways to add
+              functionality or change the looks of a blog.
+            </p>
+            <h2
+              class="block font-[Overpass] font-semibold text-slate-700 text-3xl mb-6 w-xs"
+            >
+              Robust content management
+            </h2>
+            <p class="font-[Overpass] text-slate-700 mb-10 font-light md:leading-7">
+              Flexible content management enables users to easily move through posts.
+              Increase the usability of your blog by adding customized categories,
+              sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+          </div>
+          <div class="md:w-[360px] lg:w-1/2 md:h-full">
+            <img
+              class="mb-10 md:hidden"
+              src="/images/illustration-editor-mobile.svg"
+              alt="editor"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        class="w-full mt-44 mb-20 bg-gradient-to-r from-[#2c2d3f] to-[#3f4164] rounded-tr-[120px] rounded-bl-[120px] bg-center text-center text-slate-50 md:text-left md:mt-10"
+      >
+        <div
+          class="relative flex mx-auto flex-wrap justify-center lg:justify-between lg:max-w-screen-lg h-full w-full md:h-[380px] bg-no-repeat bg-circlePatter bg-[left_50%_top_-280px] bg-[length:600px_600px] rounded-tr-[120px] pt-52 pb-20 px-10 md:pt-4 md:pb-0"
+        >
+          <img
+            class="absolute -top-44 max-w-[490px] w-[375px] sm:w-[400px] md:w-1/2 md:relative md:-top-14 lg:-top-24 lg:max-w-[565px]"
+            src="/images/illustration-phones.svg"
+            alt="phone"
+          />
+
+          <div
+            class="sm:w-[400px] max-w-[490px] md:pt-20 md:w-1/2 lg:max-w-[520px] md:h-fit"
+          >
+            <h2 class="font-[Overpass] font-semibold text-4xl mb-10">
+              State of the Art Infrastructure
+            </h2>
+            <p class="font-[Overpass] mb-10 font-light leading-7">
+              With reliability and speed in mind, worldwide data centers provide the
+              backbone for ultra-fast connectivity. This ensures your site will load
+              instantly, no matter where your readers are, keeping your site competitive.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="md:pt-64 container max-w-screen-xl mx-auto md:h-[960px] md:pl-12 md:bg-no-repeat md:bg-laptopDesktop md:bg-[left_-480px_bottom_120px] lg:bg-[left_-280px_bottom_120px]"
+      >
+        <div
+          class="mx-auto flex flex-wrap justify-center w-full md:justify-between max-w-screen-lg"
+        >
+          <div class="flex justify-center md:w-[360px] md:h-full lg:w-1/2">
+            <img
+              class="mb-10 md:hidden"
+              src="/images/illustration-laptop-mobile.svg"
+              alt="editor"
+            />
+          </div>
+          <div
+            class="flex flex-col items-center text-center px-10 md:px-0 md:w-[450px] md:items-start md:text-left lg:w-1/2"
+          >
+            <h2 class="font-[Overpass] font-semibold text-slate-700 text-3xl w-xs mb-6">
+              Free, open, simple
+            </h2>
+            <p
+              class="font-[Overpass] text-slate-700 mb-10 font-light md:mb-20 md:leading-7"
+            >
+              Blogr is a free and open source application backed by a large community of
+              helpful developers. It supports features such as code syntax highlighting,
+              RSS feeds, social media integration, third-party commenting tools, and works
+              seamlessly with Google Analytics. The architecture is clean and is
+              relatively easy to learn.
+            </p>
+            <h2
+              class="block font-[Overpass] font-semibold text-slate-700 text-3xl mb-6 w-xs"
+            >
+              Powerful tooling
+            </h2>
+            <p class="font-[Overpass] text-slate-700 mb-10 font-light md:leading-7">
+              Batteries included. We built a simple and straightforward CLI tool that
+              makes customization and deployment a breeze, but capable of producing even
+              the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="w-full bg-[#25252d] rounded-tr-[120px] flex flex-col items-center pt-[75px] md:pt-[70px]"
+      >
+        <div
+          class="flex flex-col text-center max-w-screen-xl text-[#c8c8cb] font-[Ubuntu] md:text-left md:flex-row md:flex-wrap md:justify-between md:w-full md:pl-[150px] md:pr-[172px] lg:pr-[345px]"
+        >
+          <img class="mb-20 max-w-fit max-h-[40px]" src="/images/logo.svg" alt="Blogr" />
+          <div class="mb-[60px] text-xl md:text-base">
+            <h4 class="mb-10 font-medium">Product</h4>
+            <ul class="flex flex-col md:t">
+              <li class="font-normal mb-2">Overview</li>
+              <li class="font-normal mb-2">Pricing</li>
+              <li class="font-normal mb-2">Marketplace</li>
+              <li class="font-normal mb-2">Features</li>
+              <li class="font-normal mb-2">Integrations</li>
+            </ul>
+          </div>
+          <div class="mb-[60px] text-xl md:text-base">
+            <h4 class="mb-10 font-medium">Company</h4>
+            <ul class="flex flex-col md:text-base">
+              <li class="font-normal mb-2">About</li>
+              <li class="font-normal mb-2">Team</li>
+              <li class="font-normal mb-2">Blog</li>
+              <li class="font-normal mb-2">Careers</li>
+            </ul>
+          </div>
+          <div class="mb-[60px] text-xl md:text-base">
+            <h4 class="mb-10 font-medium">Connect</h4>
+            <ul class="flex flex-col">
+              <li class="font-normal mb-2">Contact</li>
+              <li class="font-normal mb-2">Newsletter</li>
+              <li class="font-normal mb-2">LinkedIn</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-xs text-[11px] text-slate-100 mb-4">
+          Challenge by
+          <a
+            class="text-[#FF565D]"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a class="text-[#FF565D]" href="https://mairon-romero.netlify.app/"
+            >Mairon Romero</a
+          >.
+        </div>
+      </footer>
+    </article>
   </body>
 </html>

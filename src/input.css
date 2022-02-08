@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.centerDrop {
+  @apply top-20 left-1/2 transform -translate-x-1/2;
+}
+
 html,
 body {
   height: 100%;
@@ -10,12 +14,11 @@ body {
 #root {
   display: grid;
   grid:
-    [row1-start] 'banner' [row1-end]
+    [row1-start] 'banner ' [row1-end]
     [row2-start] 'designFtr' [row2-end]
     [row3-start] 'stateArt' [row3-end]
     [row3-start] 'freePowerful' [row3-end]
-    [row3-start] 'footer' [row3-end]
+    [row3-start] 'footer ' [row3-end]
     / auto;
   min-height: 100%;
-  background-color: #1e293b;
 }
