@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-langing-page-using-tailwind-TrWYfUldH)
-- Live Site URL: [Add live site URL here](https://blogr-landing-page-main-ml.netlify.app)
+- Solution URL: [Go to Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-langing-page-using-tailwind-TrWYfUldH)
+- Live Site URL: [Go to live example ](https://blogr-landing-page-main-ml.netlify.app)
 
 ## My process
 
